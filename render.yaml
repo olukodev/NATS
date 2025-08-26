@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nats
+    env: go
+    plan: free
+    buildCommand: ""
+    startCommand: ./nats-start.sh
