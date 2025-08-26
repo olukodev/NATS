@@ -9,3 +9,4 @@ services:
     envVars:
       - key: NATS_SERVER
         value: "nats://nats:4222"
+    healthCheckPath: null   # <-- disable HTTP checks
