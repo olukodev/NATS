@@ -1,7 +1,11 @@
 services:
   - type: web
     name: nats
-    env: go
+    env: docker
+    region: oregon
     plan: free
-    buildCommand: ""
-    startCommand: ./nats-start.sh
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: NATS_SERVER
+        value: "nats://nats:4222"
