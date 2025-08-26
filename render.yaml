@@ -1,5 +1,5 @@
 services:
-  - type: pserv   # <--- instead of web
+  - type: pserv
     name: nats
     env: docker
     region: oregon
