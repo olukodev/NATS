@@ -9,6 +9,11 @@ services:
     envVars:
       - key: NATS_SERVER
         value: "nats://nats:4222"
-    healthCheck:
-      type: tcp
-      port: 4222
+    healthCheckPath: /healthz
+    ports:
+      - port: 8222
+        protocol: http
+        public: true
+      - port: 4222
+        protocol: tcp
+        public: false
